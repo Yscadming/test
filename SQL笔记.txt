@@ -1,0 +1,49 @@
+数据库:按照数据结构，组织，管理信息，存放数据的仓库称作是数据库
+
+查看数据库的版本:select version(）;
+查看有哪些数据库:show.databases;
+切换数哲库命令:use 数据库名;
+查看数据库中有哪些表:show tables;
+查看数据库表的结构： desc 表名；
+
+创建数据库: create database 数据库名;
+删除数据库: drop database 数据库名;
+创建数据库表:
+create table表名（
+	字段名数据类型[约束]，
+	字段名数据类型[约束],
+	字段名数据类型[约束]
+);
+create table stu (
+	sid varchar (20) primary key,
+	sanme varcahr(15),
+	sage int (4)
+);
+
+//创建动物表
+aid	编号	长度是20		是主键
+aname	姓名	长度是10
+asex	性别	长度是4
+acolor	颜色	长度是5
+
+create table Animal (
+	aid varchar(20) primary key,
+	aname varchar(10),
+	asex int (4),
+	acolor varchar(5)
+)
+
+实体之间的关系：一对一	一对多	多对多
+复制表:
+1、复制表结构
+create table  表名	like  原表名
+2、复制表结构和内容
+create  table  表名  select  *  from  原表名
+
+删除表：
+drop table 表名；
+
+
+ALTER TABLE	表名	ADD	列名 数据类型和长度 列属性
+ALTER TABLE	表名 	MODIFY 	列名 新数据类型和长度 新列属性
+ALTERTABLE	表名 	DROP COLUMN 列名
